@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('864815040796344252618063f234f389');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '어떻게 하느님과 친구가 될 수 있습니까?',
+        description: '2022 평화를 추구하십시오 일요일 오전 ',
+        imageUrl:
+          'https://assetsnffrgf-a.akamaihd.net/assets/m/co-r22/univ/art/CO-r22_univ_pnr_09_lg.jpg',
+        link: {
+          mobileWebUrl: 'https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/videos/#ko/mediaitems/PrgEvtFeatured/pub-co-r22_9_VIDEO',
+          webUrl: 'https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/videos/#ko/mediaitems/PrgEvtFeatured/pub-co-r22_9_VIDEO',
+        },
+      buttons: [
+        {
+          title: '지금 바로 시청하기',
+          link: {
+            mobileWebUrl: 'https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/videos/#ko/mediaitems/PrgEvtFeatured/pub-co-r22_9_VIDEO',
+            webUrl: 'https://www.jw.org/ko/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/videos/#ko/mediaitems/PrgEvtFeatured/pub-co-r22_9_VIDEO',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
